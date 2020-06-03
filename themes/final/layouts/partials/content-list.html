@@ -1,0 +1,24 @@
+<div class="offset-xl-1 col-xl-7 pl-xl-3 mb-5 content-wrapper">
+
+  <div class="taxonomy-wrapper my-xl-5">
+    <h6 class="taxonomy-meta d-flex justify-content-center">
+      {{ humanize .Data.Singular}}
+    </h6>
+    <h4 class="taxonomy-title d-flex justify-content-center">
+      {{ humanize .Title }}
+    </h4>
+  </div>
+
+  {{ range (.Paginator).Pages }}
+
+    {{ partial "img-title&meta.html" . }}
+
+    <div class="post-summary">
+      {{ .Content | truncate 400 }}
+    </div>
+
+  {{ end }}
+
+  {{ partial "pagination.html" . }}
+
+</div>

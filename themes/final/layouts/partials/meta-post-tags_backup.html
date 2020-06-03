@@ -1,0 +1,8 @@
+{{ if .Params.tags }}
+  {{ range $index, $tags := .Params.tags }}
+    {{ if $index }}, {{ end }}
+    <a class="post-meta-tags-link" href="{{ "/tags/" | relURL }}{{ . | urlize }}">
+      {{ . }}
+    </a>
+  {{ end }}
+{{ end }}

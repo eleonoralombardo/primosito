@@ -1,0 +1,32 @@
+<div class="my-5 recent-posts-wrapper"> <!-- LISTA POST -->
+
+  <h5 class="d-flex justify-content-start align-items-center mb-3 recent-posts-title">
+    <strong>&nbsp;&nbsp Altri post &nbsp;&nbsp; </strong>
+  </h5>
+  {{ $list := (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+  {{range $index, $element := first 4 (after 2 ($list.ByDate.Reverse)) }}
+      <ul>
+        <li>
+          <div class="d-flex mb-4 recent-posts-list">
+            <div class="mr-3 d-flex align-items-center recent-posts-thumbnail-wrapper">
+              <a href={{ .RelPermalink }}>
+                <img src="{{ with .Params.image }}{{ . }}{{ end }}" class="recent-posts-thumbnail"/>
+              </a>
+            </div>
+            <div class="recent-posts">
+              <div>
+                <a href={{ .RelPermalink }}>
+                <strong>{{ .Title }}</strong>
+                </a>
+              </div>
+              <div class="recent-posts-date">
+              {{ partial "meta-post-time.html" . }}
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- <hr class="recent-posts-line-break"> -->
+      </ul>
+  {{end}}
+
+</div>

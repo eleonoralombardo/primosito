@@ -1,0 +1,14 @@
+<div class="mb-5 tags-wrapper"> <!-- TAGS -->
+
+  <h5 class="d-flex justify-content-start align-items-center mb-3 list-tags-title">
+     <strong>&nbsp;&nbsp Tag &nbsp;&nbsp; </strong>
+  </h5>
+  {{ range .Site.Taxonomies.tags }}
+    <button class="btn btn-tag">
+      <a href="{{.Page.Permalink}}">
+        {{ .Page.Title }}
+      </a>
+    </button>
+  {{ end }}
+
+</div>

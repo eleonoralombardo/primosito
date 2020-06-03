@@ -1,0 +1,7 @@
+{{ if .Params.categorie }}
+  {{ range $index, $categorie := .Params.categorie }}
+    <a class="post-meta-categories-link" href="{{ "/categorie/" | relURL }}{{ . | urlize }}">
+      {{ . }}
+    </a>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,82 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  color: #000;
+  background-color: #FFFFFF;
+  line-height: 1.618em;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+
+.blog-title {
+  font-size: 4.5em;
+}
+
+.blog-categories {
+  font-size: 1.1em;
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.post-single-content {
+  font-size: 1.2em;
+  line-height: 1.9em;
+}
+
+.prev-post-thumbnail,
+.next-post-thumbnail {
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+}
+
+.post-meta-wrapper {
+  font-size: 0.9em;
+}
+
+.taxonomy-title {
+  text-decoration: underline;
+}
+
+.about-single-icon {
+  width: 8em;
+  border-radius: 50%;
+}
+
+.left-about {
+  float: left;
+  margin-right: 2em;
+}
+
+.footer-break-line {
+  border-top: solid 1px #eee;
+}
+
+.footer-wrapper {
+  font-size: 0.8em;
+}
+
+.footer-copy > a:not(:last-child) {
+  text-decoration: underline;
+}
+
+.logo {
+  width: 4em;
+}
+
+.unless-last:last-child {
+    display: none;
+}

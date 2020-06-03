@@ -1,0 +1,20 @@
+baseURL = ""
+languageCode = "it"
+title = "pulcina mascherata"
+paginate = 2
+theme = "final"
+
+[params]
+mainSections = "post"
+author = "edoardoarzenton"
+description = "Questo blog è una raccolta di strumenti per la scrittura, riflessioni sull'arte narrativa e frammenti di alcune tra le migliori opere letterarie esistenti."
+dateFormatToUse = "2"
+dateFormatYear = "2006"
+bioSection = "about"
+
+[permalinks]
+  post = "/:section/:slug/"
+
+[taxonomies]
+  tag = "tags"
+  categoria = "categorie"

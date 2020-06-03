@@ -1,0 +1,47 @@
+    <div class="col-xl-4 offset-xl-2 col-md-6 d-flex my-xl-4 prev-post-wrapper">
+      {{ with .PrevInSection }}
+
+      <div class="mr-3 link-thumb-prev">
+        <a href="{{ .RelPermalink }}">
+          <big><big><big>&#10554;</big></big></big>
+          <img src="{{ with .Params.image }}{{ . }}{{ end }}" class="prev-post-thumbnail"/>
+        </a>
+      </div>
+
+      <div class="d-flex flex-column justify-content-center prev-title-wrapper">
+          <div class="prev-title">
+            Post precedente:
+          </div>
+          <div class="link-title">
+            <a href="{{ .RelPermalink }}">
+              <strong>{{ .Title }}</strong>
+            </a>
+          </div>
+      </div>
+
+      {{ end }}
+    </div>
+
+    <div class="col-xl-4 col-md-6 d-flex my-xl-4 justify-content-end next-post-wrapper">
+      {{ with .NextInSection }}
+
+      <div class="mr-3 d-flex flex-column justify-content-center next-title-wrapper">
+        <div class="d-flex justify-content-end prev-title">
+          Post successivo:
+        </div>
+        <div class="d-flex justify-content-end link-title">
+          <a href="{{ .RelPermalink }}">
+            <strong>{{ .Title }}</strong>
+          </a>
+        </div>
+      </div>
+
+      <div class="link-thumb-next">
+        <a href="{{ .RelPermalink }}">
+          <img src="{{ with .Params.image }}{{ . }}{{ end }}" class="next-post-thumbnail"/>
+          <big><big><big>&#10555;</big></big></big>
+        </a>
+      </div>
+
+      {{ end }}
+    </div>

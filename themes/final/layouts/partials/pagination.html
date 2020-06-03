@@ -1,0 +1,16 @@
+  {{ $pag := $.Paginator }}
+  <nav class="d-flex justify-content-center my-3 pagination-wrapper" role="navigation">
+    {{ if $pag.HasPrev }}
+      <div class="newer-post-wrapper">
+        <a class="newer-posts" href="{{ $pag.Prev.URL }}">&larr;</a>
+      </div>
+    {{ end }}
+    <div class="page-number-wrapper mx-2">
+      <span class="page-number">Page {{ $pag.PageNumber }} of {{ $pag.TotalPages }}</span>
+    </div>
+    {{ if $pag.HasNext }}
+      <div class="older-post-wrapper">
+        <a class="older-posts" href="{{ $pag.Next.URL }}">&rarr;</a>
+      </div>
+    {{ end }}
+  </nav>

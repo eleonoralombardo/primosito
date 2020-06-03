@@ -1,0 +1,17 @@
+<div class="about-sidebar-wrapper"> <!-- ABOUT -->
+
+  <h5 class="d-flex justify-content-start align-items-center mb-3 about-sidebar-title">
+    <strong>&nbsp;&nbsp About &nbsp;&nbsp; </strong>
+  </h5>
+  {{range where .Site.RegularPages "Type" site.Params.bioSection}}
+  <div>
+    <a href="{{ .RelPermalink }}">
+      <img src="/img/mia.jpg" class="about-sidebar-icon left">
+    </a>
+  </div>
+  <div class="about-sidebar-bio">
+    {{ .Content | safeHTML | truncate 200}}
+  </div>
+  {{end}}
+
+</div>

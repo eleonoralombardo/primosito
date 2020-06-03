@@ -1,0 +1,23 @@
+<body>
+
+  <div class="container"> <!-- Inizio container generale di Bootstrap -->
+
+    <header class="row">
+
+      <div class="col-12 d-flex justify-content-center blog-title-wrapper"> <!-- row 1 col 1 : HEADER -->
+        <h1 class="blog-title">
+          <a href="{{ "/" | relLangURL }}">
+            {{ .Site.Title }}
+          </a>
+        </h1>
+      </div>
+
+      <div class="col-12 d-flex justify-content-center mt-2 mb-5 blog-categories-wrapper">
+        <div class="blog-categories">
+          <a href="/categorie/articoli">articoli</a> |
+          <a href="/categorie/frammenti"> frammenti</a> |
+          <a href="/categorie/scrivere-per-il-web">scrivere per il web</a>
+        </div>
+      </div>
+
+    </header>

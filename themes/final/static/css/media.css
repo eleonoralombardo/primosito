@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1024px) {
+
+  .taxonomy-wrapper {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+  .prev-post-wrapper,
+  .next-post-wrapper {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+}
+
+@media only screen and (max-width: 392px) {
+
+  .blog-title {
+    font-size: 3.5em;
+  }
+
+  .blog-categories {
+    font-size: 0.9em;
+  }
+
+  .prev-post-wrapper {
+    margin-bottom: 3em;
+  }
+
+}

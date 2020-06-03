@@ -1,0 +1,41 @@
+<div class="col-12 pl-0 post-title-wrapper">
+  <a href={{ .RelPermalink }}>
+    <section>
+      <img src="{{ with .Params.image }}{{ . }}{{ end }}" alt="{{ with .Params.alttext }}{{ . }}{{ end }}" class="post-image"/>
+    </section>
+    <section class="post-title mt-3 mb-2 d-flex justify-content-center">
+      <h3>
+        <strong> {{ .Title }} </strong>
+      </h3>
+    </section>
+  </a>
+</div>
+
+<div class="d-flex justify-content-center mb-2 post-meta-wrapper">
+
+  <div class="d-flex post-meta-time-wrapper">
+    <div class="mr-1 icon-cal">
+      <i class="far fa-calendar-alt"></i>
+    </div>
+    <div class="post-meta-time">
+      {{ partial "meta-post-time.html" . }}
+    </div>
+  </div>
+
+  <div class="d-flex mx-3 post-meta-categories-wrapper">
+    <div class="post-meta-categories">
+      <span style="color: grey"> in </span>
+      {{ partial "meta-post-categories.html" . }}
+    </div>
+  </div>
+
+  <div class="d-flex post-meta-tags-wrapper">
+    <div class="mr-1 icon-tag">
+      <i class="fas fa-tags"></i>
+    </div>
+    <div class="post-meta-tags">
+      {{ partial "meta-post-tags.html" . }}
+    </div>
+  </div>
+
+</div>
